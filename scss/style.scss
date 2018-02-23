@@ -22,7 +22,27 @@ $color-html5:#E44D26;
     transition: transform linear .1s;
     transform: scale(1.1);
 }
-
+//Modo Dev
+.modoDev::before{
+   content: 'En Desarrollo';
+   position: fixed;
+   top: 10%;
+   left: 8px;
+   padding: 5px;
+   background:hsl(71, 100%, 50%);
+   z-index: 5;
+   border-radius: 4px;
+   color: rgb(164, 167, 167);  
+} 
+.modoDev::after{
+    content: '';
+    position: fixed;
+    top: 10%;
+    left: -15px; 
+    border-width: 15px;
+    border-style: solid; 
+    border-color:transparent hsl(71, 100%, 50%) transparent transparent; 
+}
 .header-container{ 
    overflow: hidden;
    position: fixed;

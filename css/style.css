@@ -769,6 +769,26 @@ body.sticky-footer {
     -ms-transform: scale(0.97);
     transform: scale(0.97); }
 
+.modoDev::before {
+  content: 'En Desarrollo';
+  position: fixed;
+  top: 10%;
+  left: 8px;
+  padding: 5px;
+  background: #d0ff00;
+  z-index: 5;
+  border-radius: 4px;
+  color: #a4a7a7; }
+
+.modoDev::after {
+  content: '';
+  position: fixed;
+  top: 10%;
+  left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent #d0ff00 transparent transparent; }
+
 .header-container {
   overflow: hidden;
   position: fixed;
