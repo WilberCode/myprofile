@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Courgette&amp;subset=latin-ext")
+        script(src="https://use.fontawesome.com/releases/v5.0.6/js/all.js") 
+
+
+        title Document
+    body
+    header.header-container
+        nav.ed-container.full 
+            .ed-item.s-20
+                h1.header-container__logo My 
+                    span Profile
+            .ed-item.s-80   
+                include block-menu
+    block about 
+    block knowledge
+    //- block experience
+    block contact
+    block footer
+    block footer-end
+
+    script(src="js/map.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap")
