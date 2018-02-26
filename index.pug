@@ -1,17 +1,17 @@
 extends template/template 
 
 block about
-    section.about
+    section.about.modoDev
         article.about-container1
         article.about-container2
         article.about-container3
         main.profile 
-            article.profile-img
+            article.profile-img.profile-container
                 article.profile-img__bg-img
                    img(src="img/foto1.jpg", alt="").imgurl
-                article.profile-img__bg-description 
                    img(src="img/avatar.png", alt="").imgavatar 
-            article.profile-content
+                article.profile-img__bg-description  
+            article.profile-content.profile-container
                 .profile-content__hello
                    p hello 
                 h1.profile-content__name I'm 
@@ -28,7 +28,7 @@ block about
                         th Celular
                         th 995871015 
                 p#typing 
-            article.profile-socialmedia
+            article.profile-socialmedia.profile-container
                 a(href="#").profile-socialmedia__link.facebook  
                     <i class="fab fa-facebook-f"></i>  
                 a(href="#").profile-socialmedia__link.github  
@@ -37,10 +37,10 @@ block about
                     <i class="fab fa-twitter"></i> 
                 a(href="#").profile-socialmedia__link.whatsapp  
                     <i class="fab fa-whatsapp"></i>
-                a(href="#").profile-socialmedia__link.linkedin  
+                a(href="#").profile-socialmedia__link.linkedin 
                     <i class="fab fa-linkedin-in"></i> 
-block knowledge
-    span#knowledge.modoDev 
+block knowledge 
+    span#knowledge 
     .knowledge
         .ed-item.knowledge-title
                 h1.title Conocimientos
