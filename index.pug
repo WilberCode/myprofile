@@ -31,7 +31,7 @@ block about
             article.profile-socialmedia.profile-container
                 a(href="#").profile-socialmedia__link.facebook  
                     <i class="fab fa-facebook-f"></i>  
-                a(href="#").profile-socialmedia__link.github  
+                a(href="https://github.com/WilberCode/" target="_blank").profile-socialmedia__link.github  
                     <i class="fab fa-github"></i>
                 a(href="#").profile-socialmedia__link.twitter  
                     <i class="fab fa-twitter"></i> 
@@ -60,7 +60,7 @@ block knowledge
                         span.skills__title   NPM, Jade & Gulp
                         span.skills__percent 40%
                     section.skills.p-45
-                        span.skills__title  Markdown, Git & GitHub
+                        span.skills__title   Markdown, Git & GitHub
                         span.skills__percent 45% 
                     section.skills.p-30
                         span.skills__title   SQL, MySQL, PHP
@@ -93,8 +93,32 @@ block knowledge
                         p Redes: Cisco Networking Academy (IT essentials, ccna1 y ccna2).
                         p Arduino y Raspberry pi (Técnico). 
                         p Conocimiento de Microsoft Office 2016(Técnico). 
-//- block experience   
-block contact
+block experience
+    .ed-container
+        spna#experience
+        section.experience
+            h1.experience__title Experiencia
+            section.experience-container 
+block success
+    .ed-container
+        spna#success
+        section.success
+            h1.success__title Casos de  Exito
+            section.success-container
+                article.container-success-website 
+                    figure.image-website
+                        img(src="img/website1.png", alt="").image-website__photo
+                        a(href="wilbercode.github.io/myprofile/").image-website__link 
+                            i.fa.fa-chevron-right 
+                    article.content-website
+                        .container__line
+                            h1.content-website__title Mi Portfolio
+                            h2.content-website__subtitle Portfolio
+                            p.content-website__description Esta Web  es mi portfolio 
+                    article.content-link
+                        a(href="#").content-link-btn__disign  Ver Diseño
+                        a(href="#").content-link-btn__website Ver Pagina 
+    block contact
     .ed-container
         span#contact
         section.contact
@@ -165,6 +189,6 @@ block footer
 block footer-end
     section.end-footer
         .ed-container
-            p 2018 &copy; Wilber Pariona Huaraca
+            p.autor-web 2018 &copy; Wilber Pariona Huaraca
     div(page_id!="<273261379729417>").fb-customerchat 
                           

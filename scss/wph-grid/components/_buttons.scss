@@ -14,8 +14,7 @@
   // &:hover {
   //   background      : darken($bg-color, 5);
   //   text-decoration : none;
-  // }
-
+  // } 
   &:active {
     transform : scale(.97);
   }
@@ -26,4 +25,17 @@
   } @else if $style == round {
     border-radius : 1.25em;
   }
+}
+%btn{
+  display          : inline-block;
+  padding          : 0.5em 0.9em; 
+  text-decoration  : none;
+  border-radius    : 18px; 
+  font-size        : 14px; 
+}
+@mixin wphButton($bg-color: rgb(93, 132, 218),$front-color: rgb(78, 74, 74),$box-color:rgb(107, 38, 148),$style: default) {
+  @extend    %btn;
+  background : $bg-color;
+  color      : $front-color; 
+  box-shadow : 2px 3px  $box-color;
 }
