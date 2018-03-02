@@ -1359,6 +1359,62 @@ body.sticky-footer {
         .main-footer-container > .main-footer-section {
           width: 100%;
           margin: 0; } }
+    @media screen and (max-width: 719px) {
+      .main-footer-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-left: -0.5em;
+        margin-right: -0.5em; }
+        .main-footer-container img {
+          display: block; }
+        body {
+          overflow-x: hidden; }
+        .main-footer-container > .main-footer-section {
+          width: calc(50% - 1em);
+          margin: 0.5em; }
+        @supports (grid-template-areas: "header") {
+          .main-footer-container {
+            display: grid;
+            grid-gap: 1em;
+            margin-left: 0;
+            margin-right: 0;
+            grid-template-columns: repeat(2, 1fr); }
+            body {
+              overflow-x: visible; }
+            .main-footer-container > .main-footer-section {
+              width: 100%;
+              margin: 0; } } }
+    @media screen and (max-width: 559px) {
+      .main-footer-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-left: -0.5em;
+        margin-right: -0.5em; }
+        .main-footer-container img {
+          display: block; }
+        body {
+          overflow-x: hidden; }
+        .main-footer-container > .main-footer-section {
+          width: calc(100% - 1em);
+          margin: 0.5em; }
+        @supports (grid-template-areas: "header") {
+          .main-footer-container {
+            display: grid;
+            grid-gap: 1em;
+            margin-left: 0;
+            margin-right: 0;
+            grid-template-columns: repeat(1, 1fr); }
+            body {
+              overflow-x: visible; }
+            .main-footer-container > .main-footer-section {
+              width: 100%;
+              margin: 0; } } }
     .main-footer-container-section .footer-info {
       position: relative;
       margin: 0;

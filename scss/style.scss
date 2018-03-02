@@ -485,6 +485,13 @@ $color-html5:#E44D26;
     margin-top: 2em;
     &-container{  
         @include grid('.main-footer-section',4);
+        @include to(45em){
+            @include grid('.main-footer-section',2);
+        }
+        @include to(35em){
+            @include grid('.main-footer-section',1);
+        }
+        
         padding: 1.2em;
          &__title{}
          &-section{ 
