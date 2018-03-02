@@ -311,6 +311,9 @@ $color-html5:#E44D26;
 //Knowledge
 .knowledge{
     margin-top:5em;
+    @include to(78em){
+        padding: 0 1em;
+    }
     &-title{
          text-align: center;
          color: $color-opacity3;
@@ -321,7 +324,10 @@ $color-html5:#E44D26;
         width: 100%;
         @include boxShadow; 
         background-color: #ffffff;
-         &-content{  
+        @include to(45em){
+            @include grid('.knowledge-container-content',1);
+        }
+         &-content{ 
           padding: 35px 15px;  
           .skills{
             display: inline-block;
@@ -394,8 +400,10 @@ $color-html5:#E44D26;
 // Contact
 
 .contact{
-    &__title {
-    
+    @include to(78em){
+        padding: 0 1em;
+    }
+    &__title { 
     text-align: center;
     color: $color-opacity3; 
     margin-top: 3em;
@@ -403,10 +411,12 @@ $color-html5:#E44D26;
     &-container{  
         @include grid('.contact-content',2); 
         width: 100%; 
-        
-        .contact-content{  
+        @include to(45em){
+            @include grid('.contact-content',1); 
+         }  
+        .contact-content{    
             background-color: #ffffff;
-            @include boxShadow; 
+            @include boxShadow;  
             &__title{ 
                 padding:0;
                 margin: 0 0 2em 0;
@@ -414,7 +424,7 @@ $color-html5:#E44D26;
                 color: $color-opacity3;
                 
             }
-            &-message{ 
+            &-message{  
                 padding: 2em; 
 
                & input[type*="text"]{ 
@@ -447,6 +457,7 @@ $color-html5:#E44D26;
                 
             }
             &-address{
+               
                 color: $color-opacity3; 
              & th{
                  padding: 1em;
@@ -506,7 +517,7 @@ $color-html5:#E44D26;
     background-color: #164c81;
     color: #a8b0b8;
     &::before{
-        content: '';
+        content:'';
         position: absolute;
         width: 100%;
         height: 100%;
