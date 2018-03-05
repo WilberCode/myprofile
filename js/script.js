@@ -1,6 +1,6 @@
 //Typing Effect
 let i = 0;
-let txt ='Técnico egresado de Telemática: Informática y Sistemas con conocimientos en desarrollo web, diseño web, programacion básicas, aplicaciones moviles básicas. Dispuesto a laborar como desarrollador web y con muchas ganas de aprender.';
+let txt ='Técnico egresado de Telemática: Informática y Sistemas con conocimientos en desarrollo web, diseño web, programacion básica, aplicaciones moviles básica. Dispuesto a laborar como desarrollador web y con muchas ganas de aprender.';
 let speed = 50;
 function typingEffect(){
     if(i < txt.length){
