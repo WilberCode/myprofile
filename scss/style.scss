@@ -313,12 +313,28 @@ $color-html5:#E44D26;
             &:active{
                 transform: scale(0.8);
             }
+        }
+        & .facebook:hover{
+            background-color: #405D9A;
+        } 
+        & .github:hover{
+            background-color: #000000; 
+        } 
+        & .twitter:hover{
+            background-color: #1DA1F2;
+        } 
+        & .whatsapp:hover{
+            background-color:#00E676;
+
+        } 
+        & .linkedin:hover{
+            background-color: #0077B5;
+
         } 
       
     }
     
-}
- 
+} 
 //Knowledge
 .knowledge{
     margin-top:5em;

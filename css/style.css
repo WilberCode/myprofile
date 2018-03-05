@@ -1069,6 +1069,16 @@ body.sticky-footer {
         -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
         transform: scale(0.8); }
+    .profile-socialmedia .facebook:hover {
+      background-color: #405D9A; }
+    .profile-socialmedia .github:hover {
+      background-color: #000000; }
+    .profile-socialmedia .twitter:hover {
+      background-color: #1DA1F2; }
+    .profile-socialmedia .whatsapp:hover {
+      background-color: #00E676; }
+    .profile-socialmedia .linkedin:hover {
+      background-color: #0077B5; }
 
 .knowledge {
   margin-top: 5em; }
