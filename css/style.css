@@ -786,6 +786,10 @@ body.sticky-footer {
   z-index: 250;
   border-radius: 4px;
   color: #a4a7a7; }
+  @media screen and (max-width: 719px) {
+    .modoDev::before {
+      top: 9%;
+      left: 8px; } }
 
 .modoDev::after {
   content: '';
@@ -796,6 +800,10 @@ body.sticky-footer {
   border-style: solid;
   border-color: transparent #d0ff00 transparent transparent;
   z-index: 250; }
+  @media screen and (max-width: 719px) {
+    .modoDev::after {
+      top: 9%;
+      left: -15px; } }
 
 .nav {
   position: fixed;

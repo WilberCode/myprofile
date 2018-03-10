@@ -42,10 +42,18 @@ $color-html5:#E44D26;
    background:hsl(71, 100%, 50%);
    z-index: 250;
    border-radius: 4px;
-   color: rgb(164, 167, 167);  
+   color: rgb(164, 167, 167); 
+   @include to(45em){
+    top: 9%;
+    left: 8px;
+   }
 } 
 .modoDev::after{
     content: '';
+    @include to(45em){
+        top: 9%;
+        left: -15px; 
+    }
     position: fixed;
     top: 12.5%;
     left: -15px; 
