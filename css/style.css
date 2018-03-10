@@ -820,6 +820,9 @@ body.sticky-footer {
       display: block;
       height: 50px; }
       .nav .nav-container-logo {
+        position: relative;
+        background-color: #597FCA;
+        z-index: 250;
         width: 100%; }
         .nav .nav-container-logo .menuIcon {
           cursor: pointer;
@@ -872,8 +875,12 @@ body.sticky-footer {
   to {
     -webkit-transform: translateX(0em);
     transform: translateX(0em); } }
+@keyframes animationMenu {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
   .nav .nav-container-menu {
-    position: relative;
     overflow: hidden; }
   .nav .menu {
     margin: 0;
@@ -920,6 +927,27 @@ body.sticky-footer {
     @media screen and (max-width: 399px) {
       .nav .menu {
         width: 90%; } }
+    .nav .menu .opacity {
+      display: block;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 300px;
+      background-color: black;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -5;
+      -webkit-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      -webkit-animation: animationMenu .5s;
+      animation: animationMenu .5s; }
+      @media screen and (max-width: 399px) {
+        .nav .menu .opacity {
+          -webkit-transform: translateX(20em);
+          -ms-transform: translateX(20em);
+          transform: translateX(20em); } }
     .nav .menu__item {
       display: block; }
     .nav .menu__link {
@@ -1132,13 +1160,13 @@ body.sticky-footer {
         padding: 15px;
         -webkit-animation: animationOpacity .8s;
         animation: animationOpacity .8s; }
-      .profile-img__bg-img:hover {
+      .profile-img__bg-img:hover, .profile-img__bg-img:focus {
         -webkit-transition: height .5s;
         -o-transition: height .5s;
         transition: height .5s;
         height: 100%; }
         @media screen and (max-width: 1023px) {
-          .profile-img__bg-img:hover {
+          .profile-img__bg-img:hover, .profile-img__bg-img:focus {
             height: 50%; } }
       .profile-img__bg-img .imgurl {
         width: 100%;
