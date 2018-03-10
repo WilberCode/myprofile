@@ -1041,6 +1041,12 @@ body.sticky-footer {
         height: auto; }
       .profile .profile-socialmedia__link {
         margin: 0 .7em; } }
+  @media screen and (max-width: 559px) {
+    .profile {
+      width: 90%; } }
+  @media screen and (max-width: 399px) {
+    .profile {
+      width: 96%; } }
   .profile-img {
     display: inherit;
     -webkit-box-orient: vertical;
