@@ -56,37 +56,109 @@ $color-html5:#E44D26;
 
 //Header  que incluye la section de logo y nav
 
-.header-container{ 
-   overflow: hidden;
+.nav{  
    position: fixed;
    z-index: 200;
    width: 100%; 
    top: 0; 
    background-color: $bg-color1;  
-   &__logo{
-       font-family:'Courgette', cursive;
-       position: absolute;
-       top: -5px;
-       left: 10px;
-       color: $color-opacity3;
-       span{
-           color: $color-text-white; 
-       }
-   }
-   .menu{ 
-    display:flex;  
-    justify-content: flex-end;
-    list-style: none; 
-
-    &__item{
-        padding-right:em(25px);
-    
+   display: flex; 
+   @include to(l){ 
+    display: block; 
+    height: 50px;
+     .nav-container-logo{  
+        width: 100%; 
+        .menuIcon{
+            cursor: pointer;
+            position: absolute;
+            top: 17px;
+            right: 25px;
+            width: 25px; 
+            box-shadow: 0 0 0 1px #ffffff, 0 8px 0 1px #ffffff,  0 16px 0 1px #ffffff; 
+            &::before{
+               content: '';
+               position: absolute; 
+               padding:15px 22px;
+               top: -8px;
+               left: -11px;
+               border: 1px solid rgba(0, 0, 0, 0.12);
+               border-radius: 5px;  
+            }
+            &:hover{
+                transform: scale(1.1);
+            } 
+            &:active{
+                transform: scale(.8);
+            }   
+        } 
     }
-    &__link{
+     .nav-container-menu{  
+        width: 100%; 
+        
+     } 
+   }
+   &-container-logo{  
+    width: 20%; 
+     &__logo{
+        margin: auto;
+        padding: 14px;
+        font-family:'Courgette', cursive; 
+        color: $color-opacity3; 
+        span{
+            color: $color-text-white; 
+        }
+     }
+  } 
+   &-container-menu{ 
+    width: 80%; 
+   }  
+   @keyframes animationMenu{
+    from{transform: translateY(-80em)}
+    to{transform: translateY(0em)}
+   }
+   .nav-container-menu{
+       position: relative;
+       overflow: hidden;
+   }
+   .menu{
+    margin: 0;
+    padding: 0;  
+    display:flex; 
+    justify-content: flex-end;
+    align-items: center;  
+    list-style: none;  
+    height: 100%; 
+    transition: transform .5s;
+    animation: animationMenu .4s ease-out;  
+    @include to(l){  
+        display:none;
+         z-index: 200;
+        background-color: #008E96; 
+        &__item{ 
+            margin-right: 0;    
+        } 
+        &__link{
+            width: 100%;
+            margin-right: 0px;
+            display: block;
+            padding: 1em ;  
+            &::after{
+                display:none;
+            }
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.12);
+            }
+        }
+       } 
+    &__item{  
+        display:block;  
+    }
+    &__link{ 
+        margin-right: 15px;
         position: relative;
         text-decoration: none;
-        color: #d9dadd;
-        padding: em(15px) 0; 
+        color: #d9dadd;  
+        padding-bottom: 1em;
         &::after{
             content: '';
             position: absolute;
@@ -95,7 +167,7 @@ $color-html5:#E44D26;
             width: 0;
             height: 4px;
             background-color: $color-text-white;
-            transition: width linear .2s;
+            transition: width linear .2s; 
         } 
         &:hover.menu__link::after{
             width: 100%;
@@ -109,7 +181,7 @@ $color-html5:#E44D26;
         }    
     }
    }  
-}
+} 
 //About 
 .about{
     position: relative;

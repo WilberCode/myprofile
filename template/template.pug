@@ -10,14 +10,13 @@ html(lang="en")
         link(rel="shortcut icon", href="https://cdn3.iconfinder.com/data/icons/human-resources-flat-1/48/14-128.png", type="image/x-icon")
 
         title My Cv
-    body
-    header.header-container
-        nav.ed-container.full 
-            .ed-item.s-20
-                h1.header-container__logo My 
-                    span Profile
-            .ed-item.s-80   
-                include block-menu
+    body 
+    nav.nav 
+        .nav-container.nav-container-logo#nav-container-logo  
+            h1.nav-container-logo__logo My 
+                span Profile
+        .nav-container.nav-container-menu
+            include block-menu
     block about 
     block knowledge
     block experience
@@ -28,3 +27,4 @@ html(lang="en")
     
     script(src="js/script.js")  
     script(src="js/chat.js")
+    script(src="js/menu-responsive.js")
