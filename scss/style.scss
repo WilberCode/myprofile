@@ -197,7 +197,7 @@ $color-html5:#E44D26;
 //About 
 .about{
     position: relative;
-    background: rgb(188, 216, 26);
+    background: rgb(31, 177, 235);
     width: 100%;
     height: 38rem; 
     overflow: hidden;
@@ -253,9 +253,10 @@ $color-html5:#E44D26;
     transform: translateX(-50%);
     width: 45em;
     height: 23em;
-    background-color: rgb(216, 230, 97); 
+    background-color: rgb(102, 123, 216); 
     display: flex;
-    flex-flow: row wrap;  
+    flex-flow: row wrap;
+    margin-right: 0;  
     @include to(45em){
         @include grid('.profile-container',1,0);  
         margin-top: -5em;  
