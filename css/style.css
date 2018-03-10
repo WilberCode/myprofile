@@ -911,7 +911,7 @@ body.sticky-footer {
             background-color: rgba(0, 0, 0, 0.12); } }
     @media screen and (max-width: 399px) {
       .nav .menu {
-        width: 100%; } }
+        width: 90%; } }
     .nav .menu__item {
       display: block; }
     .nav .menu__link {
