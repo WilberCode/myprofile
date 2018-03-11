@@ -1,7 +1,8 @@
 extends template/template 
 
 block about
-    section.about.modoDev
+    section.about#about
+        span.modoDev
         article.about-container1
         article.about-container2
         article.about-container3
@@ -47,7 +48,7 @@ block about
                 a(href="#").profile-socialmedia__link.linkedin 
                     <i class="fab fa-linkedin-in"></i> 
 block knowledge 
-    span#knowledge 
+    span#knowledge
     .knowledge
         .ed-item.knowledge-title
                 h1.title Conocimientos
@@ -112,7 +113,7 @@ block success
         section.success
             h1.success__title Casos de  Exito
             section.success-container
-                article.container-success-website 
+                article.container-success-website#container-success-website 
                     figure.image-website
                         img(src="img/website1.png", alt="").image-website__photo
                         a(href="https://wilbercode.github.io/myprofile/" target="_blank").image-website__link 
@@ -126,7 +127,7 @@ block success
                         a(href="#").content-link-btn__disign  Ver Diseño
                         a(href="#").content-link-btn__website Ver Pagina 
     block contact
-    .ed-container
+    .ed-container#container-success 
         span#contact
         section.contact
             h1.contact__title Contactame

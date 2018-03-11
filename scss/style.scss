@@ -131,10 +131,6 @@ $color-html5:#E44D26;
     from{transform: translateX(-80em)}
     to{transform: translateX(0em)}
    } 
-   @keyframes animationMenu{
-    from{opacity: 0}
-    to{opacity: 1}
-   } 
    .nav-container-menu{ 
        overflow: hidden;
    } 
@@ -612,6 +608,11 @@ $color-html5:#E44D26;
     }
 }
 // success
+@keyframes animationSuccess{
+    from{opacity:0}
+    50%{box-shadow: 0 0 8px 15px rgba(0, 0, 0, 0.12)}
+    to{opacity:1}
+}
 .success{
     @include to(78em){
         padding: 0 1em;
@@ -628,12 +629,14 @@ $color-html5:#E44D26;
          } 
         @include to(40em){
             @include grid('.container-success-website',1); 
-         }  
-
+         }    
        & .container-success-website{
            @include boxShadow;
            border-radius:8px;
-           background-color: #ffffff;
+           background-color: #ffffff; 
+           animation: animationSuccess .2s;
+           transition: transform .8s ease-out; 
+           transform: translate(100em);
             .container__line{
                 border-bottom: 1px solid $color-text-dark1;    
             }

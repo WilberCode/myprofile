@@ -13,8 +13,7 @@ opacity.className = 'opacity';
 menuIcon.addEventListener("click",function(event){ 
     menu.appendChild(opacity);  
     if( menu.style.display ==='block'){ 
-        menu.style.display='none';  
-        modoDev.style.display='block'; 
+        menu.style.display='none';   
         opacity.style.display ='none';  
     }else{
         menu.style.display='block';   
@@ -27,10 +26,14 @@ menuIcon.addEventListener("click",function(event){
     } 
     };
   
-});  
-
-
-
+});7
+let menuLink  =  document.getElementsByClassName('menu__link');
+for(let i =0; i< menuLink.length;i++){
+    menuLink[i].addEventListener('click', function(){
+        opacity.style.display ='none';
+        menu.style.display='none';   
+    });
+}
 /* Match Media for menu responsive  */
 let menuMatch =(x)=>{   
     if(x.matches){ 
