@@ -26,14 +26,9 @@ menuIcon.addEventListener("click",function(event){
     } 
     };
   
-});7
-let menuLink  =  document.getElementsByClassName('menu__link');
-for(let i =0; i< menuLink.length;i++){
-    menuLink[i].addEventListener('click', function(){
-        opacity.style.display ='none';
-        menu.style.display='none';   
-    });
-}
+});
+
+
 /* Match Media for menu responsive  */
 let menuMatch =(x)=>{   
     if(x.matches){ 
@@ -42,7 +37,11 @@ let menuMatch =(x)=>{
         menu.style.display ='flex';
         opacity.style.display ='none';     
     } 
+ 
+     
 } 
 let x = window.matchMedia("(max-width: 1023px)")
 menuMatch(x)
 x.addListener(menuMatch);  
+ 
+
