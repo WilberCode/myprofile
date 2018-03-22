@@ -26,22 +26,24 @@ menuIcon.addEventListener("click",function(event){
     } 
     };
   
-});
-
-
+}); 
 /* Match Media for menu responsive  */
 let menuMatch =(x)=>{   
     if(x.matches){ 
-        menu.style.display ='none';  
+        menu.style.display ='none';   
     }else{  
         menu.style.display ='flex';
-        opacity.style.display ='none';     
+        opacity.style.display ='none';   
     } 
- 
-     
 } 
 let x = window.matchMedia("(max-width: 1023px)")
 menuMatch(x)
 x.addListener(menuMatch);  
- 
 
+// let menuLink  =  document.getElementsByClassName('menu__link');
+// for(let i =0; i< menuLink.length;i++){
+//     menuLink[i].addEventListener('click', function(){
+//         menu.style.display ='none';  
+//         opacity.style.display ='none';    
+// });
+// }  
