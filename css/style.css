@@ -251,12 +251,6 @@ body.sticky-footer > footer { margin-top: auto; }
 /* Hash target */
 :target { padding-top: 3em; }
 
-.modoDev::before { content: 'En Desarrollo'; position: fixed; top: 12.5%; left: 8px; padding: 5px; background: #d0ff00; z-index: 250; border-radius: 4px; color: #a4a7a7; }
-@media screen and (max-width: 719px) { .modoDev::before { top: 9%; left: 8px; } }
-
-.modoDev::after { content: ''; position: fixed; top: 12.5%; left: -15px; border-width: 15px; border-style: solid; border-color: transparent #d0ff00 transparent transparent; z-index: 250; }
-@media screen and (max-width: 719px) { .modoDev::after { top: 9%; left: -15px; } }
-
 .nav { position: fixed; z-index: 200; width: 100%; top: 0; background-color: #597FCA; display: -webkit-box; display: -ms-flexbox; display: flex; /*Menu*/ }
 @media screen and (max-width: 1023px) { .nav { display: block; height: 50px; }
   .nav .nav-container-logo { position: relative; background-color: #597FCA; z-index: 250; width: 100%; }

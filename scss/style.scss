@@ -37,38 +37,7 @@ $color-html5:#E44D26;
 /* Hash target */ 
 :target{
     padding-top:3em; 
-}
-//Modo Dev
-.modoDev::before{
-   content: 'En Desarrollo';
-   position: fixed;
-   top: 12.5%;
-   left: 8px;
-   padding: 5px;
-   background:hsl(71, 100%, 50%);
-   z-index: 250;
-   border-radius: 4px;
-   color: rgb(164, 167, 167); 
-   @include to(45em){
-    top: 9%;
-    left: 8px;
-   }
 } 
-.modoDev::after{
-    content: '';
-    @include to(45em){
-        top: 9%;
-        left: -15px; 
-    }
-    position: fixed;
-    top: 12.5%;
-    left: -15px; 
-    border-width: 15px;
-    border-style: solid; 
-    border-color:transparent hsl(71, 100%, 50%) transparent transparent; 
-    z-index: 250;
-}
-
 //Nav  que incluye la section de logo y menu
 
 .nav{  
