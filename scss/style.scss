@@ -23,7 +23,7 @@ $color-opacity3: #9c9898;
 //color skill
 $color-html5:#E44D26;
 :root{
-    --footer-bg: #095172;
+    --footer-bg: #008E96;
 }
 //Mixins
 @mixin boxShadow(){
@@ -900,7 +900,7 @@ $color-html5:#E44D26;
         transform: translateX(-50%);
         width: 80%;
         height: 1px;
-        background: linear-gradient(left, #076a83  0%, #05596e  0%, #999797 50%, #06586d  100%);  
+        background: linear-gradient(left, #008E96  0%, #008E96  0%, #999797 50%, #008E96  100%);  
     } 
     &::after{
         top: 0;
