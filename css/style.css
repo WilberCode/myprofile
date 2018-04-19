@@ -246,6 +246,8 @@ body.sticky-footer > footer { margin-top: auto; }
 .button { background: #ddd; color: #333; }
 .button:active { -webkit-transform: scale(0.97); -ms-transform: scale(0.97); transform: scale(0.97); }
 
+:root { --footer-bg: #095172; }
+
 /* Hash target */
 :target { padding-top: 3em; }
 
@@ -478,11 +480,11 @@ body { overflow-x: hidden; }
 .contact-container .contact-content-address th { padding: 1em; }
 .contact-container .contact-content-map__api { width: 100%; height: 25em; display: block; }
 
-.main-footer { color: #b9b4b4; background-color: #021a20; margin-top: 2em; }
+.main-footer { color: #b9b4b4; background-color: var(--footer-bg); margin-top: 2em; }
 .main-footer-container { padding: 2em; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.footer-end { display: block; position: relative; background-color: #021a20; color: #a8b0b8; }
-.footer-end::before { content: ''; top: 0; position: absolute; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); width: 80%; height: 1px; background: -webkit-gradient(linear, left top, right top, from(#021a20), color-stop(0%, #021a20), color-stop(50%, #999797), to(#021a20)); background: -webkit-linear-gradient(left, #021a20 0%, #021a20 0%, #999797 50%, #021a20 100%); background: -o-linear-gradient(left, #021a20 0%, #021a20 0%, #999797 50%, #021a20 100%); background: linear-gradient(left, #021a20 0%, #021a20 0%, #999797 50%, #021a20 100%); }
+.footer-end { display: block; position: relative; background-color: var(--footer-bg); color: #a8b0b8; }
+.footer-end::before { content: ''; top: 0; position: absolute; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); width: 80%; height: 1px; background: -webkit-gradient(linear, left top, right top, from(#076a83), color-stop(0%, #05596e), color-stop(50%, #999797), to(#06586d)); background: -webkit-linear-gradient(left, #076a83 0%, #05596e 0%, #999797 50%, #06586d 100%); background: -o-linear-gradient(left, #076a83 0%, #05596e 0%, #999797 50%, #06586d 100%); background: linear-gradient(left, #076a83 0%, #05596e 0%, #999797 50%, #06586d 100%); }
 .footer-end::after { top: 0; content: ''; position: absolute; width: 100%; height: 100%; }
 .footer-end__content { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 .footer-end__description { text-align: center; }
