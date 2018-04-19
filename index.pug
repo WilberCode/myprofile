@@ -47,9 +47,8 @@ block about
                     <i class="fab fa-whatsapp"></i>
                 a(href="https://www.linkedin.com/in/wilber-pariona-huaraca-69971713a/"  target="_blank").profile-socialmedia__link.linkedin 
                     <i class="fab fa-linkedin-in"></i> 
-block knowledge 
-    span#knowledge
-    .knowledge
+block knowledge  
+    .knowledge#knowledge
         .ed-item.knowledge-title
                 h1.title Conocimientos
         .ed-container
@@ -101,15 +100,11 @@ block knowledge
                         p Redes: Cisco Networking Academy (IT essentials, ccna1 y ccna2).
                         p Arduino y Raspberry pi (Técnico). 
                         p Conocimiento de Microsoft Office 2016(Técnico). 
-block experience
-    .ed-container
-        spna#experience
-        section.experience
-            h1.experience__title Experiencia
-            section.experience-container 
+block experience  
+        section.experience#experience
+            h1.experience__title Experiencia 
 block success
-    .ed-container
-        spna#success
+    .ed-container#success
         section.success
             h1.success__title Casos de  Exito
             section.success-container
@@ -158,47 +153,49 @@ block success
 block footer
     footer.main-footer#main-footer
         section.main-footer-container
-            section.main-footer-container-section
-                h1.main-footer-container__title About
-                ul.footer-info
-                    i.fas.fa-user.footer-icon 
-                    li.footer-info__item: a(href="#").footer-info__link About me 1
-                    li.footer-info__item: a(href="#").footer-info__link About me 2
-                    li.footer-info__item: a(href="#").footer-info__link About me 3
-                    li.footer-info__item: a(href="#").footer-info__link About me 4
-                    li.footer-info__item: a(href="#").footer-info__link About me 5
-                    li.footer-info__item: a(href="#").footer-info__link About me 6
-                    li.footer-info__item: a(href="#").footer-info__link About me 7
-            section.main-footer-container-section
-                h1.main-footer-container__title Conocimientos
-                ul.footer-info
-                    i.fas.fa-lightbulb.footer-icon 
-                    li.footer-info__item: a(href="#").footer-info__link Conocimientos 1
-                    li.footer-info__item: a(href="#").footer-info__link Conocimientos 2
-                    li.footer-info__item: a(href="#").footer-info__link Conocimientos 3
-                    li.footer-info__item: a(href="#").footer-info__link Conocimientos 4 
-            section.main-footer-container-section
-                h1.main-footer-container__title Experencia
-                ul.footer-info
-                    i.fas.fa-book.footer-icon 
-                    li.footer-info__item: a(href="#").footer-info__link Experencia 1
-                    li.footer-info__item: a(href="#").footer-info__link Experencia 2
-                    li.footer-info__item: a(href="#").footer-info__link Experencia 3
-                    li.footer-info__item: a(href="#").footer-info__link Experencia 4
-                    li.footer-info__item: a(href="#").footer-info__link Experencia 5
-            section.main-footer-container-section
-                h1.main-footer-container__title Contactos
-                ul.footer-info
-                    i.fas.fa-phone.footer-icon 
-                    li.footer-info__item: a(href="#").footer-info__link Contactos 1
-                    li.footer-info__item: a(href="#").footer-info__link Contactos 2
-                    li.footer-info__item: a(href="#").footer-info__link Contactos 3
-                    li.footer-info__item: a(href="#").footer-info__link Contactos 4 
-                    li.footer-info__item: a(href="#").footer-info__link Contactos 5 
-                    li.footer-info__item: a(href="#").footer-info__link Contactos 6 
+            p.main-footer__title My Profile
+            //- section.main-footer-container-section
+            //-     h1.main-footer-container__title About
+            //-     ul.footer-info
+            //-         i.fas.fa-user.footer-icon 
+            //-         li.footer-info__item: a(href="#").footer-info__link About me 1
+            //-         li.footer-info__item: a(href="#").footer-info__link About me 2
+            //-         li.footer-info__item: a(href="#").footer-info__link About me 3
+            //-         li.footer-info__item: a(href="#").footer-info__link About me 4
+            //-         li.footer-info__item: a(href="#").footer-info__link About me 5
+            //-         li.footer-info__item: a(href="#").footer-info__link About me 6
+            //-         li.footer-info__item: a(href="#").footer-info__link About me 7
+            //- section.main-footer-container-section
+            //-     h1.main-footer-container__title Conocimientos
+            //-     ul.footer-info
+            //-         i.fas.fa-lightbulb.footer-icon 
+            //-         li.footer-info__item: a(href="#").footer-info__link Conocimientos 1
+            //-         li.footer-info__item: a(href="#").footer-info__link Conocimientos 2
+            //-         li.footer-info__item: a(href="#").footer-info__link Conocimientos 3
+            //-         li.footer-info__item: a(href="#").footer-info__link Conocimientos 4 
+            //- section.main-footer-container-section
+            //-     h1.main-footer-container__title Experencia
+            //-     ul.footer-info
+            //-         i.fas.fa-book.footer-icon 
+            //-         li.footer-info__item: a(href="#").footer-info__link Experencia 1
+            //-         li.footer-info__item: a(href="#").footer-info__link Experencia 2
+            //-         li.footer-info__item: a(href="#").footer-info__link Experencia 3
+            //-         li.footer-info__item: a(href="#").footer-info__link Experencia 4
+            //-         li.footer-info__item: a(href="#").footer-info__link Experencia 5
+            //- section.main-footer-container-section
+            //-     h1.main-footer-container__title Contactos
+            //-     ul.footer-info
+            //-         i.fas.fa-phone.footer-icon 
+            //-         li.footer-info__item: a(href="#").footer-info__link Contactos 1
+            //-         li.footer-info__item: a(href="#").footer-info__link Contactos 2
+            //-         li.footer-info__item: a(href="#").footer-info__link Contactos 3
+            //-         li.footer-info__item: a(href="#").footer-info__link Contactos 4 
+            //-         li.footer-info__item: a(href="#").footer-info__link Contactos 5 
+            //-         li.footer-info__item: a(href="#").footer-info__link Contactos 6 
+
 block footer-end
-    section.end-footer
-        .ed-container
-            p.autor-web 2018 &copy; Wilber Pariona Huaraca
+    section.footer-end 
+            .footer-end__content
+                p.footer-end__description 2018 &copy; Wilber Pariona Huaraca
     div(page_id!="<273261379729417>").fb-customerchat 
                           
