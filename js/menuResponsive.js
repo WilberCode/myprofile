@@ -1,5 +1,4 @@
-/*Codigo Js para menu responsive*/
-let modoDev = document.querySelector('.modoDev');
+/*Codigo Js para menu responsive*/ 
 let navContainerLogo  = document.getElementById('nav-container-logo');
 let menuIcon = document.createElement('div'); 
 menuIcon.className = 'menuIcon';
@@ -16,8 +15,7 @@ menuIcon.addEventListener("click",function(event){
         menu.style.display='none';   
         opacity.style.display ='none';  
     }else{
-        menu.style.display='block';   
-        modoDev.style.display='none'; 
+        menu.style.display='block';    
         opacity.style.display ='block';   
     }  
     window.onclick = function(event){ 

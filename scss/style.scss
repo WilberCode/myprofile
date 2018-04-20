@@ -38,8 +38,7 @@ $color-html5:#E44D26;
 :target{
     padding-top:3em; 
 } 
-//Nav  que incluye la section de logo y menu
-
+//Nav  que incluye la section de logo y menu 
 .nav{  
    position: fixed;
    z-index: 200;
@@ -821,6 +820,7 @@ $color-html5:#E44D26;
     // box-shadow: inset 0 1px 2px rgba(0,0,0,.80);  
     margin-top: 2em; 
     &-container{  
+      
         padding:2em; 
         @include edContainer;
         justify-content: center;
