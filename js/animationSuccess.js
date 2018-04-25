@@ -9,6 +9,13 @@ function animationSuccessWebsite () {
     let CSWebsite = document.getElementsByClassName('container-success-website')
     for (let i = 0; i < CSWebsite.length; i++) {
       CSWebsite[i].style.transform = 'translate(0)'
+      CSWebsite[i].style.opacity = '1'
+    }
+  } else {
+    let CSWebsite = document.getElementsByClassName('container-success-website')
+    for (let i = 0; i < CSWebsite.length; i++) {
+      CSWebsite[i].style.transform = 'translate(100em)'
+      CSWebsite[i].style.opacity = '0'
     }
   }
 }

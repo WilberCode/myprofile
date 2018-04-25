@@ -12,12 +12,15 @@ html(lang="en")
 
         title My Cv
     body
-        nav.nav 
-            .nav-container.nav-container-logo#nav-container-logo  
-                h1.nav-container-logo__logo My 
-                    span Profile
-            .nav-container.nav-container-menu#nav-container-menu
-                include block-menu
+        .nav-container
+            .nav-toggle#nav-toggle
+        section.header
+            header.header-main
+                .logo#logo
+                    h1.logo__title My 
+                        span Profile
+                nav.nav#nav 
+                    include block-menu
         block about 
         block knowledge
         block experience
@@ -25,5 +28,5 @@ html(lang="en")
         block contact
         block footer
         block footer-end 
-        
+        script(src="js/ed-grid.js")
         script(src="js/index.js")   

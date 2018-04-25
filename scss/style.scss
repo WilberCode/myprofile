@@ -22,6 +22,15 @@ $color-opacity3: #9c9898;
 
 //color skill
 $color-html5:#E44D26;
+
+//z-index
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
 :root{
     --footer-bg: #008E96;
 }
@@ -38,163 +47,113 @@ $color-html5:#E44D26;
 :target{
     padding-top:3em; 
 } 
+$bp-menu:50rem;
 //Nav  que incluye la section de logo y menu 
-.nav{  
-   position: fixed;
-   z-index: 200;
-   width: 100%; 
-   top: 0; 
-   background-color: $bg-color1;  
-   display: flex; 
-   @include to(l){   
-    display: block;  
-    height: 50px;
-     .nav-container-logo{
-        position: relative; 
-        background-color: $bg-color1;    
-        z-index: 250;
-        width: 100%; 
-        .menuIcon{
-            cursor: pointer;
-            position: absolute;
-            top: 17px;
-            right: 25px;
-            width: 25px; 
-            box-shadow: 0 0 0 1px #ffffff, 0 8px 0 1px #ffffff,  0 16px 0 1px #ffffff; 
-            &::before{
-               content: '';
-               position: absolute; 
-               padding:15px 22px;
-               top: -8px;
-               left: -11px;
-               border: 1px solid rgba(255, 255, 255, 0.3); 
-               border-radius: 5px;  
+.nav-container{
+    position:  fixed;
+    top: 9px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; 
+    z-index: var(--z-modal);
+    @include showTo($bp-menu); 
+
+}
+.nav-container:active{
+ background-color: rgba(0, 0, 0, 0.40); 
+
+}
+.nav-toggle{ 
+    @include navToggle(15px,#ffffff); 
+    top: 9.5px;
+    right: -6px;
+    @include showTo($bp-menu); 
+}
+/*Header*/
+
+.header{
+    @include edContainer;
+    @include full; 
+    position: fixed;
+    top: 0;
+    left: 0;  
+    z-index: var(--z-fixed);
+    background-color:$bg-color1;
+    height: 3.5em; 
+    
+    &-main{
+        @include edContainer;
+        @include full;  
+        .logo{ 
+            &__title{
+                margin: .5em;
             }
-            &:hover{
-                transform: scale(1.1);
-            } 
-            &:active{
-                transform: scale(.8);
-            }   
-        } 
-    }
-     .nav-container-menu{   
-        width: 100%;  
-     } 
-   }
-   &-container-logo{   
-    width: 20%; 
-     &__logo{
-        margin: auto;
-        padding: 14px;
-        font-family:'Courgette', cursive; 
-        color: $color-opacity3; 
-        span{
-            color: $color-text-white; 
-        }
-     }
-  } 
-   &-container-menu{ 
-    width: 80%; 
-   } 
-
-/*Menu*/   
-   @keyframes animationMenu{
-    from{transform: translateX(-80em)}
-    to{transform: translateX(0em)}
-   } 
-   .nav-container-menu{ 
-       overflow: hidden;
-   } 
-   .menu{ 
-    margin: 0;
-    padding: 0;  
-    display:flex; 
-    justify-content: flex-end;
-    align-items: center;  
-    list-style: none;  
-    height: 100%; 
-    transition: transform .1s ease-in;
-    animation: animationMenu .3s ease-out;   
-    @include to(l){   
-        position: fixed;  
-        z-index: 200;
-        background-color: #008E96;
-        width: 300px; 
-        display: block; 
-       
-        &__item{ 
-            margin-right: 0;  
-            border-top: 1px solid rgba(255, 255, 255, 0.08);     
-        } 
-        &__item:first-child{
-            border-top: none;
-        }
-        &__link{
-            width: 100%;
-            margin-right: 0px;
-            display: block;
-            padding: 1em ;
-            &::after{
-                display:none;
+            @include edItem(100,30,55);
+            font-family: 'Courgette', cursive;
+            color: $color-text-dark1;
+            span{
+                color: $color-text-white;
+            }  
+         }
+        .nav{  
+            @include edItem(100,70,45);
+            @include edNav(left,$bp-menu);     
+            @include mainCenter;  
+            padding-right: 0;
+            padding-left: 0;
+            @include to($bp-menu){
+                top:3.5em; 
+                width: 50%;
+                background-color:$bg-color3;
             }
-            &:hover{
-                background-color: rgba(0, 0, 0, 0.12);
-            } 
-        } 
-       }
-    @include to(25em){
-        width: 90%; 
-    }
-    .opacity{
-        display: block;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        right: 0;
-        bottom: 0; 
-        left: 300px;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.5);
-        z-index: -5;
-        transition: .5s ease-in-out;
-        animation: animationMenu .5s;
-        @include to(25em){
-         transform: translateX(20em);
-        }  
-    }    
-    &__item{  
-        display:block;  
-    }
-    &__link{ 
-        margin-right: 15px;
-        position: relative;
-        text-decoration: none;
-        color: #d9dadd;  
-        padding-bottom: 1em;
-        &::after{
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 4px;
-            background-color: $color-text-white;
-            transition: width linear .2s; 
-        } 
-        &:hover.menu__link::after{
-            width: 100%;
-            right: 0;
+            @include to(20em){ 
+                width: 75%; 
+            }
+            .menu{   
+                @include edMenu($bp-menu,edNav);   
+                &-item{  
+                    @include to($bp-menu){ 
+                        border-bottom: 1px solid rgb(1, 204, 204); 
+                        :hover{
+                            background-color: $bg-color4;
+                        }    
+                    } 
+                }
+                &-link{
+                    position: relative;
+                   @include from($bp-menu){
+                    &::after{
+                        content:''; 
+                        position: absolute;
+                        left: 0; 
+                        bottom: -10px; 
+                        width: 0;
+                        height: 4px;
+                        background-color: #fff;
+                        transition: width .2s linear;
+                       
+                    }  
+                    &:hover.menu-link::after{
+                        width: 100%;
+                        right: 0;
+            
+                    } 
+                   }
+                    @include from($bp-menu){
+                        display: inline !important;
+                        padding: 0 !important; 
+                        
 
-        }  
-        &:focus.menu__link::after{
-            width: 100%;
-            right: 0;
-
-        }    
+                    } 
+                    color: $color-text-white;  
+                      
+                }
+                
+             }  
+         } 
     }
-   }  
-} 
+}    
 //About 
 .about{
     position: relative;
@@ -630,19 +589,20 @@ $color-html5:#E44D26;
     }
     &-container{
         @include grid('.container-success-website',3);
-        @include to(50em){
-            @include grid('.container-success-website',2); 
-         } 
-        @include to(40em){
-            @include grid('.container-success-website',1); 
-         }    
-       & .container-success-website{
+        @include to(425px){
+            @include grid('.container-success-website',1);
+           }
+       & .container-success-website{ 
+           width: 380px;
            @include boxShadow;
            border-radius:8px;
            background-color: #ffffff; 
            animation: animationSuccess .2s;
-           transition: transform .8s ease-out; 
-           transform: translate(100em);
+           transition: transform .8s ease-out;  
+           transform: translateX(20em);
+           @include to(425px){
+            width: auto; 
+           }
             .container__line{
                 border-bottom: 1px solid $color-text-dark1;    
             }
@@ -653,6 +613,10 @@ $color-html5:#E44D26;
                 height: 15em;
                 margin: 0;
                 background-color: #EFEFEF;
+                @include to(425px){
+                    height: 12em;
+                }
+               
                 &__photo{ 
                     border-radius: 8px  8px 0 0;
                     width: 100%;
@@ -661,12 +625,13 @@ $color-html5:#E44D26;
                     @include to(m){
                         height:auto;
                     } 
+                } @include to(320px){
+                    height: 9em;
                 }
                 &__link{ 
                     position: absolute;
                     top: 50%;
                     left: -2em;
-                    transform: translateY(-50%);
                     width: 4em;
                     height: 4em;
                     background-color: #ffffff;
@@ -709,9 +674,18 @@ $color-html5:#E44D26;
                 display: flex;
                 padding: 1em 1em;
                 justify-content:flex-end;
+                @include to(320px){
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content:center;
+                }
                 &-btn__disign { 
                     @include wphButton($bg-color3,$color-text-white,$bg-color4);
                     margin-right: 1em; 
+                    @include to(320px){   
+                        margin-right:.5em; 
+                        margin-bottom: .5em;  
+                    } 
                     &:hover{
                         @include animationAction;
                     }
@@ -721,6 +695,7 @@ $color-html5:#E44D26;
                 }
                 &-btn__website{ 
                     @include wphButton($bg-color1,$color-text-white,$bg-color2);
+                    
                     &:hover{
                         @include animationAction;
                     }
@@ -823,35 +798,7 @@ $color-html5:#E44D26;
       
         padding:2em; 
         @include edContainer;
-        justify-content: center;
-    //     @include grid('.main-footer-section',4);
-    //     @include to(45em){
-    //         @include grid('.main-footer-section',2);
-    //     }
-    //     @include to(35em){
-    //         @include grid('.main-footer-section',1);
-    //     }
-        
-    //      &__title{}
-    //      &-section{ 
-    //         & .footer-info{
-    //             position: relative;
-    //             margin: 0;
-    //             list-style: none; 
-    //             margin-left: 1.5rem;
-    //             padding-left:.5em;
-    //             border-left: thin solid $color-opacity3;
-    //             .footer-icon{
-    //                 position: absolute;
-    //                 top: 0;
-    //                 left: -23px;
-    //             } 
-    //             &__link{
-    //                 color:$color-opacity3;
-    //             }
-
-    //         }
-    //     } 
+        justify-content: center; 
     }
 } 
 //end-footer 
