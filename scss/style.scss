@@ -161,10 +161,18 @@ $bp-menu:50rem;
     width: 100%;
     height: 39rem; 
     overflow: hidden;
-    @include to(45em){   
-            margin-bottom: 5em;  
-            height:50em;
+    @include to(45em){    
+            height:55em;
     }
+    @include to(26em){    
+            height:46em;
+    }
+    @include to(345px){      
+            height:55em;
+    }
+    @include to(261px){      
+        height:58em;
+}
     &-container1{ 
         width: 100%;
         height: 39rem; 
@@ -211,15 +219,20 @@ $bp-menu:50rem;
  }
 .profile{
     position: absolute;
-    top: 25%; 
+    top: 18%; 
     left: 50%;
     transform: translateX(-50%);
-    width: 45em;
-    height: 23em;
-    background-color: rgb(102, 123, 216); 
+    width: 52em;
+    height: 31em;
+    background-color: rgb(255, 255, 255);  
     display: flex;
     flex-flow: row wrap;
-    margin-right: 0;  
+    margin-right: 0;   
+    
+    @include to(795px){
+        width: 48em; 
+        height: 32em;
+    }
     @include to(45em){
         @include grid('.profile-container',1,0);  
         margin-top: -5em;  
@@ -235,7 +248,7 @@ $bp-menu:50rem;
             margin-top: -8em;
             height:auto; 
         }
-        .profile-socialmedia{
+        .profile-socialmedia{ 
             &__link{
               margin: 0 .7em;
             }
@@ -250,8 +263,7 @@ $bp-menu:50rem;
     &-img{ 
       display: inherit;
       flex-flow: column nowrap; 
-      width: 30%;
-      height: 100%;
+      width: 30%; 
       background-color:#ffffff;
       &__bg-img{
         position: relative;
@@ -419,11 +431,13 @@ $bp-menu:50rem;
     }
     &-socialmedia{
         display: flex;
-        justify-content: center;
-       
-        padding: 8px 0;
+        justify-content: center; 
+        align-items: center; 
         width: 100%;
         background-color: $bg-color1;
+        @include to(720px){
+            padding: .6em; 
+         }
         @include to(400px){
            :nth-child(4),:nth-child(5){
                 display: none;
