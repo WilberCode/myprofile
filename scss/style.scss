@@ -1,9 +1,9 @@
 @import "wph-grid/ed-grid";
 //Color font
-$bg-color1: #597FCA;
-$bg-color2: #2552AC;
-$bg-color3: #00BABB;
-$bg-color4: #348a8d;
+$bg-color1: #128494;
+$bg-color2: #00b7c2;
+$bg-color3: #e4e4e4;
+$bg-color4: #4ef037;
 
 //Color text
 $color-text-dark1:#c1c5c5;
@@ -70,6 +70,10 @@ $bp-menu:50rem;
     right: -6px;
     @include showTo($bp-menu); 
 }
+.go-rigth{ 
+    transition: all .3s;
+    margin-left: 50%;
+}
 /*Header*/
 
 .header{
@@ -114,9 +118,9 @@ $bp-menu:50rem;
                 @include edMenu($bp-menu,edNav);   
                 &-item{  
                     @include to($bp-menu){ 
-                        border-bottom: 1px solid rgb(1, 204, 204); 
+                        border-bottom: 1px solid #d6d6d6; 
                         :hover{
-                            background-color: $bg-color4;
+                            background-color: rgba(0, 0, 0, 0.1);
                         }    
                     } 
                 }
@@ -146,7 +150,10 @@ $bp-menu:50rem;
                         
 
                     } 
-                    color: $color-text-white;  
+                    color: $color-text-white; 
+                    @include to($bp-menu) {
+                        color: $color-text-dark2; 
+                    }
                       
                 }
                 
@@ -163,16 +170,13 @@ $bp-menu:50rem;
     overflow: hidden;
     @include to(45em){    
             height:55em;
-    }
-    @include to(26em){    
-            height:46em;
-    }
-    @include to(345px){      
-            height:55em;
-    }
+    } 
+    @include to(426px){    
+            height:62em;
+    } 
     @include to(261px){      
-        height:58em;
-}
+        height:73em;
+    }
     &-container1{ 
         width: 100%;
         height: 39rem; 
@@ -194,13 +198,13 @@ $bp-menu:50rem;
         clip-path: polygon(0 0, 100% 0, 100% 60%,0 42%); 
         width: 100%;
         height: 36rem;
-        background:url(https://images.pexels.com/photos/288183/pexels-photo-288183.jpeg?h=350&auto=compress&cs=tinysrgb) no-repeat center/cover;
+        // background:url(https://images.pexels.com/photos/288183/pexels-photo-288183.jpeg?h=350&auto=compress&cs=tinysrgb) no-repeat center/cover;
         &::before{ 
             position: absolute; 
             content: '';
             width: 100%;
             height: 100%;
-            background-color: rgba($bg-color2,0.88);
+            background-color: rgba($bg-color1,0.88);
         }
     }
     &-container3{ 
@@ -272,6 +276,9 @@ $bp-menu:50rem;
         display: flex;
         justify-content: center; 
         align-items: center; 
+        @include to(720px){
+            background-color:$bg-color3;            
+        }
         &-url{
             background-image: url(../img/lenguajes.png);
             background-repeat: no-repeat;
@@ -338,7 +345,7 @@ $bp-menu:50rem;
         &__hello{ 
            position: relative;
            width: 6em; 
-           background-color: $bg-color2;
+           background-color: $bg-color1;
            color: #ffffff;
            text-align: center;
            @include to(335px){ 
@@ -359,7 +366,7 @@ $bp-menu:50rem;
                margin-left: -5px;
                border-width: 15px;
                border-style: solid;
-               border-color:$bg-color2 transparent transparent transparent;
+               border-color:$bg-color1 transparent transparent transparent;
                transform: rotate(133deg);
              
            }
@@ -420,7 +427,7 @@ $bp-menu:50rem;
             height: 45px;
             border-radius: 50%; 
             text-decoration: none; 
-            background-color: $bg-color2;
+            background-color: $bg-color1;
             color: $color-text-white; 
             &:hover{
                @include animationAction;
@@ -497,7 +504,7 @@ $bp-menu:50rem;
                 left: 0; 
                 width: 50%;
                 height: 100%;
-                background: rgb(64, 47, 128); 
+                background: $bg-color1; 
                 border-radius: 15px; 
             }
             &.p-30::before{ width: 30%; } 
@@ -662,7 +669,7 @@ $bp-menu:50rem;
                     justify-content:center;
                 }
                 &-btn__disign { 
-                    @include wphButton($bg-color3,$color-text-white,$bg-color4);
+                    @include wphButton($bg-color2,$color-text-white,$bg-color1);
                     margin-right: 1em; 
                     @include to(320px){   
                         margin-right:.5em; 
@@ -676,7 +683,7 @@ $bp-menu:50rem;
                     }
                 }
                 &-btn__website{ 
-                    @include wphButton($bg-color1,$color-text-white,$bg-color2);
+                    @include wphButton($bg-color2,$color-text-white,$bg-color1);
                     
                     &:hover{
                         @include animationAction;
@@ -773,7 +780,7 @@ $bp-menu:50rem;
    
     // border-top: 5px solid rgba(0, 0, 0, 0.12);
     color: rgb(185, 180, 180);
-    background-color:  var(--footer-bg);
+    background-color: $bg-color1;
     // box-shadow: inset 0 1px 2px rgba(0,0,0,.80);  
     margin-top: 2em; 
     &-container{  
@@ -788,7 +795,7 @@ $bp-menu:50rem;
 .footer-end{ 
     display: block;
     position: relative;
-    background-color: var(--footer-bg);
+    background-color: $bg-color1;
     color: #a8b0b8; 
     &::before{
         content: ''; 
@@ -798,7 +805,7 @@ $bp-menu:50rem;
         transform: translateX(-50%);
         width: 80%;
         height: 1px;
-        background: linear-gradient(left, #008E96  0%, #008E96  0%, #999797 50%, #008E96  100%);  
+        background: linear-gradient(left, $bg-color1  0%, $bg-color1  0%, #999797 50%, $bg-color1  100%);  
     } 
     &::after{
         top: 0;

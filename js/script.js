@@ -6,9 +6,16 @@
 //     function typingEffect () {
 //       if (i < txt.length) {
 //          d.getElementById('typing').innerHTML += txt.charAt(i)
-//             i++ 
+//             i++
 //             setTimeout(typingEffect, speed)
 //         }
 //     }
 //     typingEffect()
+// })(document)
+// (function (d) {
+//   let page = d.getElementById('page')
+//   let toggle = d.getElementById('nav-toggle')
+//   toggle.addEventListener('click', function () {
+//      page.classList.toggle('go-rigth')
+//   })
 // })(document)
