@@ -400,8 +400,9 @@ body { overflow-x: hidden; }
 
 .knowledge-container-content { padding: 35px 15px; }
 .knowledge-container-content .skills { display: inline-block; margin-bottom: 5px; position: relative; background-color: #f5f5f5; width: 100%; height: 25px; border-radius: 15px; overflow: hidden; -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); }
-.knowledge-container-content .skills::before, .knowledge-container-content .skills .p-30::before, .knowledge-container-content .skills .p-40::before, .knowledge-container-content .skills .p-45::before, .knowledge-container-content .skills .p-50::before, .knowledge-container-content .skills .p-55::before, .knowledge-container-content .skills .p-60::before, .knowledge-container-content .skills .p-65::before, .knowledge-container-content .skills .p-70::before, .knowledge-container-content .skills .p-75::before, .knowledge-container-content .skills .p-80::before { width: 50%; content: ''; position: absolute; left: 0; width: 50%; height: 100%; background: #128494; border-radius: 15px; }
+.knowledge-container-content .skills::before, .knowledge-container-content .skills .p-30::before, .knowledge-container-content .skills .p-35::before, .knowledge-container-content .skills .p-40::before, .knowledge-container-content .skills .p-45::before, .knowledge-container-content .skills .p-50::before, .knowledge-container-content .skills .p-55::before, .knowledge-container-content .skills .p-60::before, .knowledge-container-content .skills .p-65::before, .knowledge-container-content .skills .p-70::before, .knowledge-container-content .skills .p-75::before, .knowledge-container-content .skills .p-80::before, .knowledge-container-content .skills .p-85::before, .knowledge-container-content .skills .p-90::before, .knowledge-container-content .skills .p-95::before { width: 50%; content: ''; position: absolute; left: 0; width: 50%; height: 100%; background: #128494; border-radius: 15px; }
 .knowledge-container-content .skills.p-30::before { width: 30%; }
+.knowledge-container-content .skills.p-35::before { width: 35%; }
 .knowledge-container-content .skills.p-40::before { width: 40%; }
 .knowledge-container-content .skills.p-45::before { width: 45%; }
 .knowledge-container-content .skills.p-50::before { width: 50%; }
@@ -411,7 +412,9 @@ body { overflow-x: hidden; }
 .knowledge-container-content .skills.p-70::before { width: 70%; }
 .knowledge-container-content .skills.p-75::before { width: 75%; }
 .knowledge-container-content .skills.p-80::before { width: 80%; }
+.knowledge-container-content .skills.p-85::before { width: 85%; }
 .knowledge-container-content .skills.p-90::before { width: 90%; }
+.knowledge-container-content .skills.p-95::before { width: 95%; }
 .knowledge-container-content .skills__title { display: block; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); padding: 5px; background-color: rgba(0, 0, 0, 0.25); color: #e9e1e1; }
 .knowledge-container-content .skills__percent { position: absolute; display: block; color: rgba(0, 0, 0, 0.4); right: 1%; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
 
