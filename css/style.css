@@ -375,6 +375,9 @@ body.sticky-footer > footer { margin-top: auto; }
 .profile-socialmedia .facebook:hover { background-color: #405D9A; }
 .profile-socialmedia .github:hover { background-color: #000000; }
 .profile-socialmedia .twitter:hover { background-color: #1DA1F2; }
+.profile-socialmedia .whatsapp { position: relative; }
+.profile-socialmedia .tooltip { position: absolute; background-color: #128494; padding: .4em .8em; color: #ffffff; z-index: -4; -webkit-transition: all 0.3s cubic-bezier(0.46, 1.99, 1, 1); -o-transition: all 0.3s cubic-bezier(0.46, 1.99, 1, 1); transition: all 0.3s cubic-bezier(0.46, 1.99, 1, 1); opacity: 0; top: 4em; }
+.profile-socialmedia .whatsapp:hover .tooltip-bottom { z-index: 1; opacity: 1; }
 .profile-socialmedia .whatsapp:hover { background-color: #00E676; }
 .profile-socialmedia .linkedin:hover { background-color: #0077B5; }
 
