@@ -304,7 +304,8 @@ body.sticky-footer > footer { margin-top: auto; }
   .header-main .nav .menu-item :hover { background-color: rgba(0, 0, 0, 0.1); } }
 .header-main .nav .menu-link { position: relative; color: #ebe5e5; }
 @media screen and (min-width: 50rem) { .header-main .nav .menu-link::after { content: ''; position: absolute; left: 0; bottom: -10px; width: 0; height: 4px; background-color: #fff; -webkit-transition: width .2s linear; -o-transition: width .2s linear; transition: width .2s linear; }
-  .header-main .nav .menu-link:hover.menu-link::after { width: 100%; right: 0; } }
+  .header-main .nav .menu-link:hover.menu-link::after { width: 100%; right: 0; }
+  .header-main .nav .menu-link.active::before { content: ''; position: absolute; left: 0; bottom: -10px; width: 100%; height: 4px; background-color: #fff; -webkit-transition: width .2s linear; -o-transition: width .2s linear; transition: width .2s linear; } }
 @media screen and (min-width: 50rem) { .header-main .nav .menu-link { display: inline !important; padding: 0 !important; } }
 @media screen and (max-width: 799px) { .header-main .nav .menu-link { color: #989c9c; } }
 

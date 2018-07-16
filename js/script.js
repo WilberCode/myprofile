@@ -17,5 +17,15 @@
 //   let toggle = d.getElementById('nav-toggle')
 //   toggle.addEventListener('click', function () {
 //      page.classList.toggle('go-rigth')
-//   })
+//   }) 
+// let menuLink = d.querySelectorAll('.menu-link')
+// for(let i = 0; i < menuLink.length;i++){
+//     // menuLink[i].addEventListener('click',function(event){
+//     //     if(event.target.classList !== 'active'){ 
+//     //         menuLink[i].classList.toggle('active')
+//     //     }else{
+//     //         menuLink[i].classList.remove('active') 
+//     //     }
+//     // })
+// }
 // })(document)

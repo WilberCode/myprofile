@@ -143,6 +143,22 @@ $bp-menu:50rem;
                         right: 0;
             
                     } 
+                    &.active::before{
+                        content:''; 
+                        position: absolute;
+                        left: 0; 
+                        bottom: -10px; 
+                        width: 100%;
+                        height: 4px;
+                        background-color: #fff;
+                        transition: width .2s linear;
+                       
+                    }
+                    // &:hover.menu-link::after{
+                    //     width: 100%;
+                    //     right: 0;
+            
+                    // } 
                    }
                     @include from($bp-menu){
                         display: inline !important;
