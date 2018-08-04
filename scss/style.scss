@@ -475,7 +475,7 @@ $bp-menu:50rem;
         }
         .tooltip{
             position: absolute;
-            background-color:$bg-color1;
+            background-color:var(--bg-color1);
             padding: .4em .8em;
             color: #ffffff;
             z-index: -4;
