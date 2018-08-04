@@ -1,4 +1,13 @@
 @import "wph-grid/ed-grid";
+@import "wph-grid/config-color";
+@import "wph-grid/radio-customize";
+:root{
+    --bg-color1: #128494;
+    //--bg-color2: #00b7c2;
+    --bg-color2: #00696f;
+    --bg-color3: #e4e4e4;
+    --bg-color4: #4ef037;
+}
 //Color font
 $bg-color1: #128494;
 $bg-color2: #00b7c2;
@@ -83,7 +92,7 @@ $bp-menu:50rem;
     top: 0;
     left: 0;  
     z-index: var(--z-fixed);
-    background-color:$bg-color1;
+    background-color:var(--bg-color1);
     height: 3.5em; 
     
     &-main{
@@ -210,7 +219,7 @@ $bp-menu:50rem;
         top: 0;
         width: 100%;
         height: 15rem;
-        background-color: $bg-color1; 
+        background-color: var(--bg-color1); 
         clip-path: polygon(0 0, 100% 0, 100% 60%,0 42%); 
         width: 100%;
         height: 36rem;
@@ -220,7 +229,7 @@ $bp-menu:50rem;
             content: '';
             width: 100%;
             height: 100%;
-            background-color: rgba($bg-color1,0.88);
+            background-color: rgba(var(--bg-color1),0.88);
         }
     }
     &-container3{ 
@@ -361,7 +370,7 @@ $bp-menu:50rem;
         &__hello{ 
            position: relative;
            width: 6em; 
-           background-color: $bg-color1;
+           background-color: var(--bg-color1);
            color: #ffffff;
            text-align: center;
            @include to(335px){ 
@@ -382,7 +391,7 @@ $bp-menu:50rem;
                margin-left: -5px;
                border-width: 15px;
                border-style: solid;
-               border-color:$bg-color1 transparent transparent transparent;
+               border-color:var(--bg-color1) transparent transparent transparent;
                transform: rotate(133deg);
              
            }
@@ -425,7 +434,7 @@ $bp-menu:50rem;
         justify-content: center; 
         align-items: center; 
         width: 100%;
-        background-color: $bg-color1;
+        background-color:var(--bg-color1);
         @include to(720px){
             padding: .6em; 
          }
@@ -443,8 +452,8 @@ $bp-menu:50rem;
             height: 45px;
             border-radius: 50%; 
             text-decoration: none; 
-            background-color: $bg-color1;
             color: $color-text-white; 
+            background-color:var(--bg-color1);
             &:hover{
                @include animationAction;
             }
@@ -539,7 +548,7 @@ $bp-menu:50rem;
                 left: 0; 
                 width: 50%;
                 height: 100%;
-                background: $bg-color1; 
+                background: var(--bg-color1); 
                 border-radius: 15px; 
             }
             &.p-30::before{ width: 30%; } 
@@ -706,31 +715,15 @@ $bp-menu:50rem;
                     flex-flow: row wrap;
                     justify-content:center;
                 }
-                &-btn__disign { 
-                    @include wphButton($bg-color2,$color-text-white,$bg-color1);
+                &__btn { 
+                    @include wphButton(var(--bg-color1) ,$color-text-white,var(--bg-color2));
                     margin-right: 1em; 
                     @include to(320px){   
-                        margin-right:.5em; 
                         margin-bottom: .5em;  
+                        margin-right:.5em; 
                     } 
-                    &:hover{
-                        @include animationAction;
-                    }
-                    &:active{
-                        transform: scale(.8);
-                    }
-                }
-                &-btn__website{ 
-                    @include wphButton($bg-color2,$color-text-white,$bg-color1);
-                    
-                    &:hover{
-                        @include animationAction;
-                    }
-                    &:active{
-                        transform: scale(.8);
-                    }
-                }
-                
+               
+                }  
             }
        }
     }
@@ -783,14 +776,9 @@ $bp-menu:50rem;
                 &__sent{
                     @include edgridButton;
                     color:#ffffff;
-                    background-color: $bg-color1;
+                    background-color: var(--bg-color1);
                     border-radius: 4px;
-                    &:hover{
-                        @include animationAction;
-                    }
-                    &:active{
-                        transform: scale(.8);
-                    }
+                   
                 }
                 
             }
@@ -818,11 +806,10 @@ $bp-menu:50rem;
    
     // border-top: 5px solid rgba(0, 0, 0, 0.12);
     color: rgb(185, 180, 180);
-    background-color: $bg-color1;
+    background-color: var(--bg-color1);
     // box-shadow: inset 0 1px 2px rgba(0,0,0,.80);  
     margin-top: 2em; 
     &-container{  
-      
         padding:2em; 
         @include edContainer;
         justify-content: center; 
@@ -833,7 +820,7 @@ $bp-menu:50rem;
 .footer-end{ 
     display: block;
     position: relative;
-    background-color: $bg-color1;
+    background-color: var(--bg-color1);
     color: #a8b0b8; 
     &::before{
         content: ''; 
@@ -843,7 +830,7 @@ $bp-menu:50rem;
         transform: translateX(-50%);
         width: 80%;
         height: 1px;
-        background: linear-gradient(left, $bg-color1  0%, $bg-color1  0%, #999797 50%, $bg-color1  100%);  
+        background: linear-gradient(left, rgba(0,0,0,0.01)  0%,rgba(0,0,0,0.01)   0%, #a5a4a4 50%, rgba(0,0,0,0.01) 100%);  
     } 
     &::after{
         top: 0;
