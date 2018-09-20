@@ -1,5 +1,5 @@
-extends template/template 
-
+extends template/template   
+include ./includes/mixins 
 block about
     section.about#about 
         article.about-container1
@@ -28,8 +28,9 @@ block about
                         th Celular
                         th 995871015 
                 p Técnico profesional de Informática y Sistemas. Soy una persona que le gusta y es apasionado por el maravilloso mundo del desarrollo web y tengo la capacidad de desarrollar páginas webs estáticas, todo tipo de páginas webs responsive y blogs personalizados a medida con Wordpress(CMS) y tengo la facilidad de adaptarme a proyectos grandes. También tengo conocimientos básicos en el lado del servidor(Backend). Dispuesto para asumir nuevos retos, aprender y superarme como profesional y como persona.
+                 
             article.profile-socialmedia.profile-container
-                a(href="https://web.facebook.com/DeivisParionaHuaraca"  target="_blank").profile-socialmedia__link.facebook  
+                a(href="https://web.facebook.com/DeivisParionaHuaraca" target="_blank").profile-socialmedia__link.facebook  
                     <i class="fab fa-facebook-f"></i>  
                 a(href="https://github.com/WilberCode/" target="_blank").profile-socialmedia__link.github  
                     <i class="fab fa-github"></i>
@@ -38,7 +39,7 @@ block about
                 a(href="#").profile-socialmedia__link.whatsapp  
                     <i class="fab fa-whatsapp"></i>
                     span.tooltip.tooltip-bottom +51995871015
-                a(href="https://www.linkedin.com/in/wilber-pariona-huaraca-69971713a/"  target="_blank").profile-socialmedia__link.linkedin 
+                a(href="https://www.linkedin.com/in/wilber-pariona-huaraca-69971713a/" target="_blank").profile-socialmedia__link.linkedin 
                     <i class="fab fa-linkedin-in"></i> 
 block knowledge  
     .knowledge#knowledge
@@ -109,21 +110,9 @@ block success
     .ed-container#success
         section.success
             h1.success__title Casos de  Exito
-            section.success-container
-                article.container-success-website#container-success-website 
-                    figure.image-website
-                        img(src="img/website1.png", alt="").image-website__photo
-                        a(href="https://wilbercode.github.io/myprofile/" target="_blank").image-website__link 
-                            i.fa.fa-chevron-right 
-                    article.content-website
-                        .container__line
-                            h1.content-website__title Mi Portfolio
-                            h2.content-website__subtitle Portfolio
-                            p.content-website__description Esta Web  es mi portfolio 
-                    article.content-link
-                        a(href="#").content-link__btn Ver Diseño
-
-    block contact
+            section.success-container 
+                +name('img/website1.png', 'https://wilbercode.github.io/myprofile/', 'Mi Portfolio', 'Portfolio', 'Esta Web  es mi portfolio ', 'Ver Diseño')         
+block contact
     .ed-container#container-success 
         span#contact
         section.contact

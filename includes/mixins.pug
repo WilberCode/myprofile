@@ -1,0 +1,18 @@
+mixin name(urlImg, urlLink, title, subtitle, description, linkBtn) 
+     article.container-success-website#container-success-website 
+        figure.image-website
+            img(src=urlImg, alt="").image-website__photo
+            a(href=urlLink target="_blank").image-website__link 
+                i.fa.fa-chevron-right 
+        article.content-website
+            .container__line
+                h1.content-website__title= title
+                h2.content-website__subtitle= subtitle
+                p.content-website__description= description
+        article.content-link
+            a(href="#").content-link__btn Ver Diseño  
+    
+
+    
+
+    
